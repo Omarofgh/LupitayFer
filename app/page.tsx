@@ -37,11 +37,16 @@ export default function Page() {
   <span className="block">{wedding.bride}</span>
   <span className="block italic text-primary my-2">&</span>
   <span className="block">{wedding.groom}</span>
+<h1 className="mt-6 font-serif text-3xl sm:text-7xl md:text-8xl font-light leading-tight tracking-tight text-center w-full break-words">
+  <span className="inline-block sm:block">{wedding.bride}</span>
+  <span className="inline-block sm:block italic text-primary mx-2 sm:mx-0 sm:my-2">&</span>
+  <span className="inline-block sm:block">{wedding.groom}</span>
 </h1>
-<div className="mt-8 flex items-center gap-4 text-sm uppercase tracking-[0.25em] text-foreground/80">
+<div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] text-foreground/80">
   <span>{wedding.dateLabel}</span>
-  <span className="h-4 w-px bg-foreground/30" />
-  <span>{wedding.city}</span>
+  <span className="h-4 w-px bg-foreground/30 hidden sm:inline-block" />
+  <span className="hidden sm:inline-block">{wedding.city}</span>
+  <span className="w-full block sm:hidden text-xs mt-1">{wedding.city}</span>
 </div>
         </div>
         <span className="absolute bottom-8 z-10 text-xs uppercase tracking-[0.3em] text-muted-foreground">
