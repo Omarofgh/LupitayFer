@@ -39,26 +39,11 @@ export const wedding = {
     },
   ],
 
-  {/* Gallery */}
-<section className="bg-secondary px-6 py-24 sm:py-32">
-  <div className="mb-16 text-center">
-    <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Momentos</p>
-    <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">Nuestra historia</h2>
-  </div>
-  <div className="mx-auto grid max-w-5xl grid-cols-3 gap-2 sm:gap-4">
-    {wedding.gallery.map((photo) => (
-      <div
-        key={photo.src}
-        className="relative aspect-square overflow-hidden rounded-lg"
-      >
-        <Image
-          src={photo.src || '/placeholder.svg'}
-          alt={photo.alt || 'Foto de la pareja'}
-          fill
-          className="object-cover transition-transform duration-700 hover:scale-105"
-        />
-      </div>
-    ))}
+gallery: [
+  { src: '/imágenes/Galería-08', alt: 'Momento de los novios' },
+  { src: '/imágenes/Galería-1.jpg', alt: 'Los novios sonriendo' },
+  { src: '/imágenes/Galería-3.jpg', alt: 'Los novios juntos' },
+],
   </div>
 </section>
 export type Wedding = typeof wedding
