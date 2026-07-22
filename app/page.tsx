@@ -29,7 +29,7 @@ export default function Page() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-background/55" />
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex w-full flex-col items-center px-4 text-center">
           <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
             Nos casamos
           </p>
