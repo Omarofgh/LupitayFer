@@ -42,6 +42,7 @@ export const wedding = {
   gallery: [
     { src: '/images/gallery-1.jpg', alt: 'Los novios riendo frente a frente' },
     { src: '/images/gallery-3.jpg', alt: 'Los novios sentados juntos en el parque' },
+    { src: '/images/WhatsApp 2026-07-03 a las 4.4.1.00 PM.jpeg' },
   ],
 }
 
