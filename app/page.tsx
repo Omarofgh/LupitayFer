@@ -33,7 +33,7 @@ export default function Page() {
           <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
             Nos casamos
           </p>
-          <h1 className="mt-6 font-serif text-6xl font-light leading-none tracking-tight text-balance sm:text-8xl">
+          <h1 className="mt-6 font-serif text-5xl font-light leading-none tracking-tight text-balance sm:text-8xl">
             {wedding.bride}
             <span className="mx-3 italic text-primary">&</span>
             {wedding.groom}
