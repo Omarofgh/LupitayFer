@@ -123,29 +123,27 @@ export default function Page() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-secondary px-6 py-24 sm:py-32">
-        <div className="mb-16 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Momentos</p>
-          <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">Nuestra historia</h2>
-        </div>
-        <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-3">
-          {wedding.gallery.map((photo, i) => (
-            <div
-              key={photo.src}
-              className={`relative overflow-hidden rounded-lg ${
-                i === 0 ? 'sm:row-span-2 sm:aspect-[3/4]' : 'aspect-square'
-              }`}
-            >
-              <Image
-                src={photo.src || '/placeholder.svg'}
-                alt={photo.alt}
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+<section className="bg-secondary px-6 py-24 sm:py-32">
+  <div className="mb-16 text-center">
+    <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Momentos</p>
+    <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">Nuestra historia</h2>
+  </div>
+  <div className="mx-auto grid max-w-5xl grid-cols-3 gap-2 sm:gap-4">
+    {wedding.gallery.map((photo) => (
+      <div
+        key={photo.src}
+        className="relative aspect-square overflow-hidden rounded-lg"
+      >
+        <Image
+          src={photo.src || '/placeholder.svg'}
+          alt={photo.alt || 'Foto de la pareja'}
+          fill
+          className="object-cover transition-transform duration-700 hover:scale-105"
+        />
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* RSVP */}
       <section className="mx-auto max-w-2xl px-6 py-24 sm:py-32">
