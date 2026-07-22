@@ -33,10 +33,10 @@ export default function Page() {
           <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
             Nos casamos
           </p>
-          <h1 className="mt-6 font-serif text-5xl font-light leading-none tracking-tight text-balance sm:text-8xl">
-            {wedding.bride}
-            <span className="mx-3 italic text-primary">&</span>
-            {wedding.groom}
+          <h1 className="mt-6 font-serif text-5xl font-light leading-tight tracking-tight text-center sm:text-8xl">
+            <span className="block">{wedding.bride}</span>
+            <span className="block italic text-primary my-2">&</span>
+            <span className="block">{wedding.groom}</span>
           </h1>
           <div className="mt-8 flex items-center gap-4 text-sm uppercase tracking-[0.25em] text-foreground/80">
             <span>{wedding.dateLabel}</span>
