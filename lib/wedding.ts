@@ -40,10 +40,10 @@ export const wedding = {
   ],
 
   // Lista de imágenes de la galería
-  gallery: [
+gallery: [
+    { src: '/imágenes/Galería-08.jpg', alt: 'Momento de los novios' },
     { src: '/imágenes/Galería-1.jpg', alt: 'Los novios sonriendo' },
-    { src: '/imágenes/Galería-3.jpg', alt: 'Los novios juntos' },
-    { src: '/imágenes/Galería-1.png', alt: 'Momento especial' },
+    { src: '/imágenes/galería-3.jpg', alt: 'Los novios juntos' },
   ],
 }
 
