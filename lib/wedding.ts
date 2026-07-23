@@ -33,10 +33,10 @@ export const wedding = {
     },
   ],
 
-  gallery: [
-    { src: '/images/hero.jpg', alt: 'Momento de los novios' },
-    { src: '/images/hero.jpg', alt: 'Los novios sonriendo' },
-    { src: '/images/hero.jpg', alt: 'Los novios juntos' },
+ gallery: [
+    { src: '/images/gallery-1.jpg', alt: 'Los novios sonriendo' },
+    { src: '/images/gallery-3.jpg', alt: 'Los novios juntos' },
+    { src: '/images/gallery-8.jpg', alt: 'Momento de los novios' },
   ],
 }
 
