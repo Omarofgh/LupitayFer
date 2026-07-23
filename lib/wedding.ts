@@ -39,11 +39,12 @@ export const wedding = {
     },
   ],
 
-gallery: [
-  { src: '/images/gallery-1.jpg', alt: 'Los novios sonriendo' },
-  { src: '/images/gallery-3.jpg', alt: 'Los novios juntos' },
-  { src: '/imágenes/Galería-1.jpg', alt: 'Momento especial' },
-],
-  </div>
-</section>
+  // Lista de imágenes de la galería
+  gallery: [
+    { src: '/imágenes/Galería-1.jpg', alt: 'Los novios sonriendo' },
+    { src: '/imágenes/Galería-3.jpg', alt: 'Los novios juntos' },
+    { src: '/imágenes/Galería-1.png', alt: 'Momento especial' },
+  ],
+}
+
 export type Wedding = typeof wedding
