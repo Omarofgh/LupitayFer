@@ -1,24 +1,18 @@
-// Datos de la boda. Reemplaza los valores marcados con "// TODO" cuando los tengas.
+// Datos de la boda
 export const wedding = {
-  // Nombres de los novios
   bride: 'Mariana',
   groom: 'Fernando',
-  // Fecha y hora de inicio (ceremonia religiosa). Formato ISO.
   date: '2026-11-14T17:00:00',
   dateLabel: '14 de Noviembre, 2026',
   city: 'Veracruz, Ver.',
-  // Fecha límite para confirmar asistencia
   rsvpDeadline: '10 de Noviembre, 2026',
 
-  // Texto principal de la invitación
   intro:
     'Tenemos el honor de invitarles a la celebración de nuestro matrimonio civil y religioso, y a compartir con nosotros el inicio de esta nueva etapa llena de amor, fe y esperanza.',
 
-  // Mensaje de cierre
   closing:
     'Tu compañía hará que este día sea aún más especial. Será un honor celebrar juntos el inicio de nuestra nueva vida.',
 
-  // Eventos y lugares
   events: [
     {
       label: 'Ceremonia Religiosa',
@@ -39,8 +33,7 @@ export const wedding = {
     },
   ],
 
-  // Lista de imágenes de la galería
-gallery: [
+  gallery: [
     { src: '/imágenes/Galería-08.jpg', alt: 'Momento de los novios' },
     { src: '/imágenes/Galería-1.jpg', alt: 'Los novios sonriendo' },
     { src: '/imágenes/galería-3.jpg', alt: 'Los novios juntos' },
