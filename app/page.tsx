@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { MapPin, Clock, Heart } from 'lucide-react'
-import { wedding } from '@/lib/wedding'
+import { wedding } from '@/lib/boda'
 import { Countdown } from '@/components/countdown'
 import { RsvpForm } from '@/components/rsvp-form'
 import { IntroVideo } from '@/components/intro-video'
@@ -20,34 +20,32 @@ export default function Page() {
       <IntroVideo />
 
       {/* Hero */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
         <Image
-          src="/images/hero.jpg"
+          src="/imágenes/Héroe.jpg"
           alt="Los novios abrazados en el parque"
           fill
           priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-background/55" />
-        <div className="relative z-10 mx-auto flex w-full max-w-sm flex-col items-center px-6 text-center sm:max-w-none">
+        <div className="relative z-10 mx-auto flex w-full max-w-2xl flex-col items-center px-2 text-center">
           <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
             Nos casamos
           </p>
-          <h1 className="mt-6 font-serif text-5xl font-light leading-tight tracking-tight text-center sm:text-8xl">
-  <span className="block">{wedding.bride}</span>
-  <span className="block italic text-primary my-2">&</span>
-  <span className="block">{wedding.groom}</span>
-<h1 className="mt-6 font-serif text-3xl sm:text-7xl md:text-8xl font-light leading-tight tracking-tight text-center w-full break-words">
-  <span className="inline-block sm:block">{wedding.bride}</span>
-  <span className="inline-block sm:block italic text-primary mx-2 sm:mx-0 sm:my-2">&</span>
-  <span className="inline-block sm:block">{wedding.groom}</span>
-</h1>
-<div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] text-foreground/80">
-  <span>{wedding.dateLabel}</span>
-  <span className="h-4 w-px bg-foreground/30 hidden sm:inline-block" />
-  <span className="hidden sm:inline-block">{wedding.city}</span>
-  <span className="w-full block sm:hidden text-xs mt-1">{wedding.city}</span>
-</div>
+          
+          <h1 className="mt-6 font-serif text-3xl sm:text-7xl md:text-8xl font-light leading-tight tracking-tight text-center w-full break-words">
+            <span className="inline-block sm:block">{wedding.bride}</span>
+            <span className="inline-block sm:block italic text-primary mx-2 sm:mx-0 sm:my-2">&</span>
+            <span className="inline-block sm:block">{wedding.groom}</span>
+          </h1>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] text-foreground/80">
+            <span>{wedding.dateLabel}</span>
+            <span className="h-4 w-px bg-foreground/30 hidden sm:inline-block" />
+            <span className="hidden sm:inline-block">{wedding.city}</span>
+            <span className="w-full block sm:hidden text-xs mt-1">{wedding.city}</span>
+          </div>
         </div>
         <span className="absolute bottom-8 z-10 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           Desliza
@@ -123,27 +121,27 @@ export default function Page() {
       </section>
 
       {/* Gallery */}
-<section className="bg-secondary px-6 py-24 sm:py-32">
-  <div className="mb-16 text-center">
-    <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Momentos</p>
-    <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">Nuestra historia</h2>
-  </div>
-  <div className="mx-auto grid max-w-5xl grid-cols-3 gap-2 sm:gap-4">
-    {wedding.gallery.map((photo) => (
-      <div
-        key={photo.src}
-        className="relative aspect-square overflow-hidden rounded-lg"
-      >
-        <Image
-          src={photo.src || '/placeholder.svg'}
-          alt={photo.alt || 'Foto de la pareja'}
-          fill
-          className="object-cover transition-transform duration-700 hover:scale-105"
-        />
-      </div>
-    ))}
-  </div>
-</section>
+      <section className="bg-secondary px-6 py-24 sm:py-32">
+        <div className="mb-16 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Momentos</p>
+          <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">Nuestra historia</h2>
+        </div>
+        <div className="mx-auto grid max-w-5xl grid-cols-3 gap-2 sm:gap-4">
+          {wedding.gallery.map((photo) => (
+            <div
+              key={photo.src}
+              className="relative aspect-square overflow-hidden rounded-lg"
+            >
+              <Image
+                src={photo.src || '/placeholder.svg'}
+                alt={photo.alt || 'Foto de la pareja'}
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* RSVP */}
       <section className="mx-auto max-w-2xl px-6 py-24 sm:py-32">
