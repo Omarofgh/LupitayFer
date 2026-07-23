@@ -164,7 +164,7 @@ export default function Page() {
           </h2>
 
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Tu presencia es nuestro mejor regalo. Sin embargo, si deseas hacernos un detalle, ponemos a tu disposición nuestra mesa de bodas:
+            Tu presencia es nuestro mejor regalo. Sin embargo, si deseas hacernos un detalle, ponemos a tu disposición nuestra mesa de regalos:
           </p>
 
           <div className="mt-6 inline-flex flex-col items-center justify-center rounded-lg border border-border bg-secondary px-8 py-4 shadow-sm">
@@ -178,7 +178,7 @@ export default function Page() {
 
           <div className="mt-6">
             <a
-              href="https://www.liverpool.com.mx/tienda/home"
+              href="https://mesaderegalos.liverpool.com.mx/?gclsrc=aw.ds&gad_source=1&gad_campaignid=23781062105&gclid=Cj0KCQjw94bTBhDQARIsAN3vv0z5RL_pIbedteAaPk7orZpkWE5PLUdtZ1DdHgP6KPO_0KLORbQPIBEaAqifEALw_wcB"
               target="_blank"
               rel="noreferrer"
               className={buttonVariants({
