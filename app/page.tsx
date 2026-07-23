@@ -126,11 +126,11 @@ export default function Page() {
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Momentos</p>
           <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">Nuestra historia</h2>
         </div>
-        <div className="mx-auto grid max-w-5xl grid-cols-3 gap-2 sm:gap-4">
+        <div className="mx-auto flex max-w-2xl flex-col gap-8">
           {wedding.gallery.map((photo, i) => (
             <div
               key={photo.src || i}
-              className="relative aspect-square overflow-hidden rounded-lg"
+              className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-sm"
             >
               <Image
                 src={photo.src || '/images/hero.jpg'}
