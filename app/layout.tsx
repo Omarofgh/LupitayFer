@@ -16,25 +16,19 @@ const jost = Jost({
 })
 
 export const metadata: Metadata = {
-  title: 'Nuestra Boda',
-  description: 'Nos casamos. Acompáñanos a celebrar nuestro gran día.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
+  title: 'Boda de Mariana & Fernando',
+  description: '¡Nos casamos! Te invitamos a celebrar con nosotros nuestro gran día.',
+  openGraph: {
+    title: 'Boda de Mariana & Fernando',
+    description: '¡Nos casamos! Te invitamos a celebrar con nosotros nuestro gran día.',
+    images: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/images/hero.jpg', // Usa la foto principal que ya tienes subida
+        width: 1200,
+        height: 630,
+        alt: 'Boda de Mariana y Fernando',
       },
     ],
-    apple: '/apple-icon.png',
   },
 }
 
