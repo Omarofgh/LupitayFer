@@ -8,7 +8,7 @@ export const wedding = {
   rsvpDeadline: '10 de Noviembre, 2026',
 
   intro:
-    'Tenemos el honor de invitarles a la celebración de nuestro matrimonio civil y religioso, y a compartir con nosotros el inicio de esta nueva etapa llena de amor, fe y esperanza.',
+    'Tenemos el honor de invitarles a la celebración de nuestro matrimonio civil y religioso, y a compartir con nosotros el inicio de esta nueva etapa llena de amor, fé y esperanza.',
 
   closing:
     'Tu compañía hará que este día sea aún más especial. Será un honor celebrar juntos el inicio de nuestra nueva vida.',
