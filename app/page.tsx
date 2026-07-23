@@ -22,8 +22,8 @@ export default function Page() {
       {/* Hero */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
         <Image
-          src="/imágenes/Galería-1.jpg"
-          alt="Los novios abrazados"
+          src="/images/hero.jpg"
+          alt="Los novios abrazados en el parque"
           fill
           priority
           className="object-cover"
@@ -36,7 +36,7 @@ export default function Page() {
           
           <h1 className="mt-6 font-serif text-3xl sm:text-7xl md:text-8xl font-light leading-tight tracking-tight text-center w-full break-words">
             <span className="inline-block sm:block">{wedding.bride}</span>
-            <span className="inline-block sm:block italic text-primary mx-2 sm:mx-0 sm:my-2">&</span>
+            <span className="inline-block sm:block italic text-primary mx-2 sm:mx-0 sm:my-2">&amp;</span>
             <span className="inline-block sm:block">{wedding.groom}</span>
           </h1>
 
@@ -127,13 +127,13 @@ export default function Page() {
           <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">Nuestra historia</h2>
         </div>
         <div className="mx-auto grid max-w-5xl grid-cols-3 gap-2 sm:gap-4">
-          {wedding.gallery.map((photo) => (
+          {wedding.gallery.map((photo, i) => (
             <div
-              key={photo.src}
+              key={photo.src || i}
               className="relative aspect-square overflow-hidden rounded-lg"
             >
               <Image
-                src={photo.src || '/placeholder.svg'}
+                src={photo.src || '/images/hero.jpg'}
                 alt={photo.alt || 'Foto de la pareja'}
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -178,7 +178,7 @@ export default function Page() {
 
           <div className="mt-6">
             <a
-              href="https://mesaderegalos.liverpool.com.mx/busqueda-evento"
+              href="https://www.liverpool.com.mx/tienda/home"
               target="_blank"
               rel="noreferrer"
               className={buttonVariants({
@@ -210,7 +210,7 @@ export default function Page() {
       <footer className="border-t border-border px-6 py-16 text-center">
         <h2 className="font-serif text-4xl font-light">
           {wedding.bride}
-          <span className="mx-2 italic text-primary">&</span>
+          <span className="mx-2 italic text-primary">&amp;</span>
           {wedding.groom}
         </h2>
         <p className="mt-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">
