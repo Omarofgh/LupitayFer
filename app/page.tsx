@@ -155,7 +155,58 @@ export default function Page() {
         </div>
         <RsvpForm deadline={wedding.rsvpDeadline} />
       </section>
+{/* Mesa de Regalos */}
+      <section className="bg-secondary px-6 py-20 text-center border-t border-border">
+        <div className="mx-auto max-w-xl">
+          {/* Ícono/Logo estilizado estilo Liverpool */}
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#E10075]/10 text-[#E10075]">
+            <svg
+              className="h-6 w-6 fill-current"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M20 6h-3V4c0-1.11-.89-2-2-2H9c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-11-2h6v2H9V4zm11 15H4V8h16v11z"/>
+            </svg>
+          </div>
 
+          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            Mesa de Regalos
+          </p>
+          <h2 className="mt-2 font-serif text-3xl font-light text-[#E10075] sm:text-4xl">
+            Liverpool
+          </h2>
+
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Tu presencia es nuestro mejor regalo. Sin embargo, si deseas hacernos un detalle, ponemos a tu disposición nuestra mesa de bodas:
+          </p>
+
+          {/* Tarjeta con el número de evento */}
+          <div className="mt-6 inline-flex flex-col items-center justify-center rounded-lg border border-border bg-background px-8 py-4 shadow-sm">
+            <span className="text-xs uppercase tracking-widest text-muted-foreground">
+              Número de evento
+            </span>
+            <span className="mt-1 font-serif text-2xl font-semibold tracking-wider text-foreground">
+              52031038
+            </span>
+          </div>
+
+          {/* Botón directo a buscar mesa en Liverpool */}
+          <div className="mt-6">
+            <a
+              href="https://mesaderegalos.liverpool.com.mx/busqueda-evento"
+              target="_blank"
+              rel="noreferrer"
+              className={buttonVariants({
+                variant: 'outline',
+                size: 'lg',
+                className: 'rounded-md tracking-wide hover:bg-[#E10075] hover:text-white transition-colors',
+              })}
+            >
+              Ir a Liverpool.com.mx
+            </a>
+          </div>
+        </div>
+      </section>
       {/* Footer */}
       <footer className="border-t border-border px-6 py-16 text-center">
         <h2 className="font-serif text-4xl font-light">
