@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { MapPin, Clock, Heart } from 'lucide-react'
-import { wedding } from '@/lib/boda'
+import { wedding } from '@/lib/wedding'
 import { Countdown } from '@/components/countdown'
 import { RsvpForm } from '@/components/rsvp-form'
 import { IntroVideo } from '@/components/intro-video'
@@ -22,8 +22,8 @@ export default function Page() {
       {/* Hero */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
         <Image
-          src="/imágenes/Héroe.jpg"
-          alt="Los novios abrazados en el parque"
+          src="/imágenes/Galería-1.jpg"
+          alt="Los novios abrazados"
           fill
           priority
           className="object-cover"
@@ -143,22 +143,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* RSVP */}
-      <section className="mx-auto max-w-2xl px-6 py-24 sm:py-32">
-        <div className="mb-12 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Confirma tu asistencia</p>
-          <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">¿Nos acompañas?</h2>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Tu presencia es el mejor regalo. Por favor confirma antes del{' '}
-            {wedding.rsvpDeadline}.
-          </p>
-        </div>
-        <RsvpForm deadline={wedding.rsvpDeadline} />
-      </section>
-{/* Mesa de Regalos */}
-      <section className="bg-secondary px-6 py-20 text-center border-t border-border">
+      {/* Mesa de Regalos */}
+      <section className="bg-background px-6 py-20 text-center border-t border-border">
         <div className="mx-auto max-w-xl">
-          {/* Ícono/Logo estilizado estilo Liverpool */}
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#E10075]/10 text-[#E10075]">
             <svg
               className="h-6 w-6 fill-current"
@@ -180,8 +167,7 @@ export default function Page() {
             Tu presencia es nuestro mejor regalo. Sin embargo, si deseas hacernos un detalle, ponemos a tu disposición nuestra mesa de bodas:
           </p>
 
-          {/* Tarjeta con el número de evento */}
-          <div className="mt-6 inline-flex flex-col items-center justify-center rounded-lg border border-border bg-background px-8 py-4 shadow-sm">
+          <div className="mt-6 inline-flex flex-col items-center justify-center rounded-lg border border-border bg-secondary px-8 py-4 shadow-sm">
             <span className="text-xs uppercase tracking-widest text-muted-foreground">
               Número de evento
             </span>
@@ -190,7 +176,6 @@ export default function Page() {
             </span>
           </div>
 
-          {/* Botón directo a buscar mesa en Liverpool */}
           <div className="mt-6">
             <a
               href="https://mesaderegalos.liverpool.com.mx/busqueda-evento"
@@ -207,6 +192,20 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* RSVP */}
+      <section className="mx-auto max-w-2xl px-6 py-24 sm:py-32">
+        <div className="mb-12 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Confirma tu asistencia</p>
+          <h2 className="mt-4 font-serif text-4xl font-light sm:text-5xl">¿Nos acompañas?</h2>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Tu presencia es el mejor regalo. Por favor confirma antes del{' '}
+            {wedding.rsvpDeadline}.
+          </p>
+        </div>
+        <RsvpForm deadline={wedding.rsvpDeadline} />
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-border px-6 py-16 text-center">
         <h2 className="font-serif text-4xl font-light">
