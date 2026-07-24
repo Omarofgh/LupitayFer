@@ -5,11 +5,10 @@ import { Button } from '@/components/ui/button'
 
 export function RsvpForm({ deadline }: { deadline: string }) {
   const [name, setName] = useState('')
-  const [guests, setGuests] = useState('1')
   const [attending, setAttending] = useState<'yes' | 'no'>('yes')
   const [message, setMessage] = useState('')
 
-  // Número de WhatsApp configurado con la clave de país de México (+52 1 229 420 9150)
+  // Número de WhatsApp configurado (+52 1 229 420 9150)
   const PHONE_NUMBER = '5212294209150' 
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -20,7 +19,6 @@ export function RsvpForm({ deadline }: { deadline: string }) {
     // Texto formateado que se enviará por WhatsApp
     let whatsappMessage = `¡Hola! Confirmo mi asistencia para la boda:\n\n`
     whatsappMessage += `👤 *Nombre:* ${name}\n`
-    whatsappMessage += `👥 *Número de invitados:* ${guests}\n`
     whatsappMessage += `✨ *¿Asistirá?:* ${attendanceText}\n`
 
     if (message.trim()) {
@@ -51,22 +49,6 @@ export function RsvpForm({ deadline }: { deadline: string }) {
           placeholder="Tu nombre"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className={fieldClass}
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <label htmlFor="guests" className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          Número de invitados
-        </label>
-        <input
-          id="guests"
-          name="guests"
-          type="number"
-          min={1}
-          max={10}
-          value={guests}
-          onChange={(e) => setGuests(e.target.value)}
           className={fieldClass}
         />
       </div>
