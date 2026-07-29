@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { MapPin, Clock, Heart } from 'lucide-react'
+import { MapPin, Clock, Heart, Building2 } from 'lucide-react'
 import { wedding } from '@/lib/wedding'
 import { Countdown } from '@/components/countdown'
 import { RsvpForm } from '@/components/rsvp-form'
@@ -23,7 +23,7 @@ export default function Page() {
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
         <Image
           src="/images/hero.jpg"
-          alt="Los novios abrazados en el parque"
+          alt="Los novios abrazados"
           fill
           priority
           className="object-cover"
@@ -164,7 +164,7 @@ export default function Page() {
           </h2>
 
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Tu presencia es nuestro mejor regalo. Sin embargo, si deseas hacernos un detalle, ponemos a tu disposición nuestra mesa de regalos:
+            Tu presencia es nuestro mejor regalo. Sin embargo, si deseas hacernos un detalle, ponemos a tu disposición nuestra mesa de bodas:
           </p>
 
           <div className="mt-6 inline-flex flex-col items-center justify-center rounded-lg border border-border bg-secondary px-8 py-4 shadow-sm">
@@ -178,7 +178,7 @@ export default function Page() {
 
           <div className="mt-6">
             <a
-              href="https://mesaderegalos.liverpool.com.mx/?gclsrc=aw.ds&gad_source=1&gad_campaignid=23781062105&gclid=Cj0KCQjw94bTBhDQARIsAN3vv0z5RL_pIbedteAaPk7orZpkWE5PLUdtZ1DdHgP6KPO_0KLORbQPIBEaAqifEALw_wcB"
+              href="https://www.liverpool.com.mx/tienda/home"
               target="_blank"
               rel="noreferrer"
               className={buttonVariants({
@@ -189,6 +189,49 @@ export default function Page() {
             >
               Ir a Liverpool.com.mx
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Transferencia Bancaria */}
+      <section className="bg-secondary px-6 py-20 text-center border-t border-border">
+        <div className="mx-auto max-w-xl">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Building2 className="h-6 w-6" strokeWidth={1.5} />
+          </div>
+
+          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            Regalo en Efectivo
+          </p>
+          <h2 className="mt-2 font-serif text-3xl font-light sm:text-4xl">
+            Transferencia Bancaria
+          </h2>
+
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Si prefieres realizarnos un obsequio en efectivo para nuestra nueva etapa juntos, ponemos a tu disposición nuestra cuenta:
+          </p>
+
+          <div className="mt-6 flex flex-col items-center justify-center rounded-lg border border-border bg-background p-6 shadow-sm">
+            <span className="text-xs uppercase tracking-widest text-muted-foreground">
+              Banco
+            </span>
+            <span className="mt-1 font-serif text-lg font-medium text-foreground">
+              Mercado Pago
+            </span>
+
+            <span className="mt-4 text-xs uppercase tracking-widest text-muted-foreground">
+              Titular
+            </span>
+            <span className="mt-1 font-serif text-lg font-medium text-foreground">
+              Luis Fernando Quitano Hernández
+            </span>
+
+            <span className="mt-4 text-xs uppercase tracking-widest text-muted-foreground">
+              CLABE / Número de Cuenta
+            </span>
+            <span className="mt-1 font-mono text-xl font-semibold tracking-wider text-primary select-all">
+              722969070904049710
+            </span>
           </div>
         </div>
       </section>
