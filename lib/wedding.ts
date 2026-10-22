@@ -18,7 +18,7 @@ export const wedding = {
       label: 'Ceremonia Religiosa',
       venue: 'Iglesia La Divina Providencia',
       address: 'Veracruz, Ver.',
-      schedule: [{ name: 'Ceremonia Religiosa', time: '5:00 p.m.' }],
+      schedule: [{ name: 'Ceremonia Religiosa', time: '4:00 p.m.' }],
       mapsQuery: 'Iglesia La Divina Providencia, Veracruz',
     },
     {
